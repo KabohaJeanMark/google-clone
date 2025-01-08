@@ -6,11 +6,11 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-      <h1>Google Clone</h1>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<>This is the search page</>} />
+          <Route path="/about" element={<>This is the about page</>} />
         </Routes>
       </Router>
     </div>
