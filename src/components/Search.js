@@ -1,26 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import { Button } from '@mui/material';
-import '../styles/Search.css'
+import '../styles/Search.css';
 
-function Search() {
+function Search({hideButtons}) {
+  const [input, setInput] = useState('');
+
+  const navigate = useNavigate();
+
   const search = (e) => {
-    e.preventDefaukt(); // stog page from refreshing
-    
+    e.preventDefault(); // stog page from refreshing
+    console.log("You hit the search button")
+
+    navigate("/search")
   }
+
   return (
-    <div className='search'>
+    <form className='search'>
       <div className="search__input">
         <SearchIcon className="search__inputIcon" />
-        <input type="text" />
+        <input type="text" value={input} onChange={e => setInput(e.target.value)} />
         <MicIcon />
       </div>
-      <div className="search__buttons">
-        <Button onClick={search} variant='outlined'>Google Search</Button>
+      {!hideButtons ? 
+      (
+        <div className="search__buttons">
+        <Button type="submit" onClick={search} variant='outlined'>
+          Google Search
+        </Button>
         <Button variant='outlined'>I'm Feeling Lucky</Button>
       </div>
-    </div>
+      ) : (
+        <div className="search__buttons">
+        <Button className='search__buttonsHidden' type="submit" onClick={search} variant='outlined'>
+          Google Search
+        </Button>
+        <Button className='search__buttonsHidden' variant='outlined'>I'm Feeling Lucky</Button>
+      </div>
+      )}
+    </form>
   )
 }
 
