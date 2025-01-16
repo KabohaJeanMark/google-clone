@@ -3,16 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import { Button } from '@mui/material';
+import { useStateValue } from '../contextAPI/StateProvider';
+import { actionTypes } from '../contextAPI/reducer';
 import '../styles/Search.css';
 
 function Search({hideButtons}) {
   const [input, setInput] = useState('');
+  const [{}, dispatch] = useStateValue();
 
   const navigate = useNavigate();
 
   const search = (e) => {
     e.preventDefault(); // stog page from refreshing
     console.log("You hit the search button")
+
+    dispatch({
+      type: actionTypes.SET_SEARCH_TERM,
+      term: input,
+    })
 
     navigate("/search")
   }
