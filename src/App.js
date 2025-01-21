@@ -5,6 +5,7 @@ import SearchPage from './pages/SearchPage';
 import './styles/App.css';
 
 function App() {
+  console.log("App is rendering")
   return (
     <div className="app">
       <Router>
