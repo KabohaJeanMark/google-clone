@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+## GOOGLE CLONE 🔍
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sleek and responsive Google Search Clone built with ReactJS, leveraging the Context API for state management and the Google Custom Search API for fetching real-time search results. 
 
-## Available Scripts
+This project mimics the core functionalities of Google's search engine, delivering fast and accurate search results with a clean, user-friendly UI.
 
-In the project directory, you can run:
+## 🚀 Features
+- ✅ Real-time Search – Fetch results dynamically using the Google Custom Search API.
+- ✅ React Context API – Efficient global state management without prop drilling.
+- ✅ REST API Integration – Retrieve search results via Google's Custom Search JSON API.
+- ✅ Responsive Design – Fully optimized for desktop and mobile devices.
 
-### `npm start`
+## Responsive Design
+### Landing Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| ![screenshot](./public/screenshots/home-mobile.webp) |![screenshot](./public/screenshots/home-tablet.webp) | ![screenshot](./public/screenshots/home-desktop.webp) | 
+|:---:|:---:|:---:|
+| Mobile view | Tablet view | Laptop view |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The Search Page
 
-### `npm test`
+![screenshot](./public/screenshots/search.webp)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
+- ReactJS – Frontend framework for building UI components.
+- Context API – State management for handling search queries.
+- Google Custom Search API – Fetching search results dynamically.
+- React Router – Navigation between pages.
+- Material UI – Styled components
 
-### `npm run build`
+## Instructions
+To get a local copy up and running follow these simple example steps.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Gitbash installed to navigate between the branches.
+- A preferred text editor for example VS Code.
+- A browser such as Google Chrome
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔧 Installation and Setup
+1. Clone this [GitHub Repo](https://github.com/KabohaJeanMark/google-clone/) to your computer on yourFolder by typing these commands in the terminal or download as a Zip file and extract.
+```bash
+git clone https://github.com/KabohaJeanMark/google-clone/
+cd google-clone
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
+```bash
+npm install
+```
+3️. Set up your Google API Key
 
-### `npm run eject`
+- Go to Google Custom Search.
+- Generate an API Key and Search Engine ID.
+- Create a .env file and add:
+```bash
+REACT_APP_GOOGLE_API_KEY=your_google_api_key
+REACT_APP_SEARCH_ENGINE_ID=your_search_engine_id
+```
+4. Run the application
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🎯 Future Improvements
+- 📌 Voice search integration.
+- 📌 Trending searches display.
+- 📌 Improved search filtering options.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🤝 Contributing
+Contributions are welcome! Feel free to fork the repo, make improvements, and submit a pull request.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Show your support
+Give a ⭐️ if you like this project!
