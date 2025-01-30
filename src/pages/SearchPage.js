@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Search from '../components/Search'
 import { useStateValue } from '../contextAPI/StateProvider'
 import useGoogleSearch from '../useGoogleSearch'
@@ -16,10 +17,15 @@ function SearchPage() {
 
   return (
     <div className='searchPage'>
-      <Search hideButtons/>
       <div className="searchPage__header">
-        <h1>{term}</h1>
+        <Link to="/">
+          <img className='searchPage__logo' src="https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg" alt="" />
+        </Link>
+        <div className="searchPage__headerBody">
+          <Search hideButtons/>
+        </div>
       </div>
+      
       <div className="searchPage__results">
 
       </div>
