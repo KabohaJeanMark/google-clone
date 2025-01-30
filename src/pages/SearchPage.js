@@ -26,7 +26,7 @@ function SearchPage() {
         <Link to="/">
           <img className='searchPage__logo' src="https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg" alt="" />
         </Link>
-          <Search hideButtons/>
+          <Search hideButtons term={term}/>
           <div className="searchPage__options">
             <div className="searchPage__optionsLeft">
               <div className="searchPage__option">

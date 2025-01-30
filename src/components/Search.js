@@ -7,7 +7,7 @@ import { useStateValue } from '../contextAPI/StateProvider';
 import { actionTypes } from '../contextAPI/reducer';
 import '../styles/Search.css';
 
-function Search({hideButtons}) {
+function Search({hideButtons, term=''}) {
   const [input, setInput] = useState('');
   const [{}, dispatch] = useStateValue();
 
@@ -29,7 +29,7 @@ function Search({hideButtons}) {
     <form className='search'>
       <div className="search__input">
         <SearchIcon className="search__inputIcon" />
-        <input type="text" value={input} onChange={e => setInput(e.target.value)} />
+        <input type="text" value={input} onChange={e => setInput(e.target.value)} placeholder={term} />
         <MicIcon />
       </div>
       {!hideButtons ? 
