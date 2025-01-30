@@ -15,11 +15,9 @@ import '../styles/SearchPage.css'
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
   // LIVE API CALL
-  // const { data } = useGoogleSearch(term)
-  // mock API call
-  const data = Response;
-
-  console.log(data)
+  const { data } = useGoogleSearch(term)
+  // Mock API call
+  // const data = Response;
 
   return (
     <div className='searchPage'>
@@ -68,10 +66,30 @@ function SearchPage() {
           </div>
         </div>
       </div>
+      {true && (
+        <div className="searchPage__results">
+          <p className="searchPage__resultCount">
+            About {data?.searchInformation.formattedTotalResults} results in ({data?.searchInformation.formattedSearchTime} seconds) for {term}
+          </p>
+          {data?.items.map((item) => (
+            <div className="searchPage__result">
+              <a href={item.link}>
+                {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+                  <img className='searchPage__resultImage' src={item.pagemap?.cse_image[0]?.src} alt="" />
+                )}
+                {item.displayLink}
+              </a>
+              <a href={item.link} className="searchPage__resultTitle">
+                <h2>{item.title}</h2>
+              </a>
+              <p className="searchPage__resultSnippet">
+                {item.snippet}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
       
-      <div className="searchPage__results">
-
-      </div>
     </div>
   )
 }
