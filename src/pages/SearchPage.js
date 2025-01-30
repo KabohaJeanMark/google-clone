@@ -22,10 +22,10 @@ function SearchPage() {
   return (
     <div className='searchPage'>
       <div className="searchPage__header">
+        <div className="searchPage__headerBody">
         <Link to="/">
           <img className='searchPage__logo' src="https://lh3.googleusercontent.com/d_S5gxu_S1P6NR1gXeMthZeBzkrQMHdI5uvXrpn3nfJuXpCjlqhLQKH_hbOxTHxFhp5WugVOEcl4WDrv9rmKBDOMExhKU5KmmLFQVg" alt="" />
         </Link>
-        <div className="searchPage__headerBody">
           <Search hideButtons/>
           <div className="searchPage__options">
             <div className="searchPage__optionsLeft">
