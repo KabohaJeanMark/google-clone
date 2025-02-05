@@ -14,8 +14,7 @@ function Search({hideButtons, term=''}) {
   const navigate = useNavigate();
 
   const search = (e) => {
-    e.preventDefault(); // stog page from refreshing
-    console.log("You hit the search button")
+    e.preventDefault();
 
     dispatch({
       type: actionTypes.SET_SEARCH_TERM,
